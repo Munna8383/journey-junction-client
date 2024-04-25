@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-[#AC87C5] text-xl">Journey Junction</a>
+    <a className="btn btn-ghost text-[#AC87C5] text-xl hidden md:block">Journey Junction</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -52,7 +53,7 @@ const Navbar = () => {
   <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
-    <button className="btn">Login</button>
+   <Link to={"/login"}> <button className="btn bg-[#AC87C5] text-white">Login</button></Link>
   </div>
 </div>
             

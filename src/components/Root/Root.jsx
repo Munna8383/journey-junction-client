@@ -10,7 +10,7 @@ const Root = () => {
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </div>
-            <div>
+            <div className="mt-10">
                 <Footer></Footer>
             </div>
 
