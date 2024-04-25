@@ -3,6 +3,9 @@ import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+
 
 
 const Navbar = () => {
@@ -24,7 +27,8 @@ const Navbar = () => {
         }
     }
     return (
-        <div className="mt-4">
+        <div className="mt-2">
+          <Tooltip id="my-tooltip" />
 
 <div className="navbar bg-base-100 text-[#808080]">
   <div className="navbar-start">
@@ -32,8 +36,8 @@ const Navbar = () => {
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Item 1</a></li>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[5] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><Link to={"/"}>Home</Link></li>
         <li>
           <a>Parent</a>
         </li>
@@ -44,7 +48,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><NavLink className={({ isActive }) =>
+      <li><NavLink to={"/"} className={({ isActive }) =>
          isActive ? "text-[#AC87C5] font-bold" : ""
         }>Home</NavLink></li>
       <li>
@@ -55,7 +59,9 @@ const Navbar = () => {
   </div>
   <div className="navbar-end space-x-5">
     <button onClick={handleTheme} className="text-3xl">{theme?<CiLight />:<MdDarkMode></MdDarkMode>}</button>
-  <div className="tooltip hidden md:block" data-tip={user?.displayName||"Null"} > 
+  <div data-tooltip-id="my-tooltip"
+  data-tooltip-content={user? user?.displayName:"Null"}
+  data-tooltip-place="top"  > 
  
           <img className="w-10 rounded-full"  src={user?user?.photoURL:"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
         </div>

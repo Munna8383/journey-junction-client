@@ -19,11 +19,3 @@ const app = initializeApp(firebaseConfig);
 export default app;
 
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCt7g0ErS68rcJNTqhiLYtBCWbsuHBnKoM",
-//   authDomain: "journey-junction-ca237.firebaseapp.com",
-//   projectId: "journey-junction-ca237",
-//   storageBucket: "journey-junction-ca237.appspot.com",
-//   messagingSenderId: "424651402032",
-//   appId: "1:424651402032:web:268f4e116747eb465a36f5"
-// };
