@@ -1,43 +1,69 @@
-import { useState } from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import {FaEye,FaEyeSlash} from "react-icons/fa"
+import { Toaster,toast} from 'react-hot-toast';
+import { AuthContext } from "../Providers/AuthProvider";
+
 
 
 
 const Register = () => {
     const [showPassword,setShowPassword]=useState(false)
+    const{createUser,updatePhotoAndName,logout}= useContext(AuthContext)
 
     const handleRegister=e=>{
+        e.preventDefault()
+
         
-        // const passwordRegex = /^(?=.*[A-Z]).+$/;
-        // const lowerpasswordRegex = /^(?=.*[a-z]).+$/;
+        
+        const passwordRegex = /^(?=.*[A-Z]).+$/;
+        const lowerpasswordRegex = /^(?=.*[a-z]).+$/;
 
        
 
-        e.preventDefault()
-        // const name = e.target.name.value 
-        // const photo =e.target.photo.value 
-        // const email = e.target.email.value 
-        // const password = e.target.password.value 
+        
+        const name = e.target.name.value 
+        const photo =e.target.photo.value 
+        const email = e.target.email.value 
+        const password = e.target.password.value 
+
+        console.log(name,photo,email,password)
 
 
-        // if (!passwordRegex.test(password)) {
-        //     // toast.error("password must have an uppercase letter")
+        if (!passwordRegex.test(password)) {
+            toast.error("password must have an uppercase letter")
 
-        //     return
-        //   }
+            return
+          }
 
-        // if(!lowerpasswordRegex.test(password)){
-        //     // toast.error("password must have an lowercase letter")
+        if(!lowerpasswordRegex.test(password)){
+            toast.error("password must have an lowercase letter")
 
-        //     return
-        // }
+            return
+        }
 
-        // if(password.length<6){
-        //     // toast.error("password length mus be 6 character")
+        if(password.length<6){
+            toast.error("password length mus be 6 character")
 
-        //     return
-        // }
+            return
+        }
+
+        createUser(email,password)
+        .then(()=>{
+            updatePhotoAndName(name,photo)
+            .then(()=>{
+                toast.success('Registered Successfully')
+                logout()
+
+                // setTimeout(()=>{
+                //        navigate("/login")
+
+                // },2000)
+            })
+        })
+
+        e.target.reset()
 
 
 
@@ -45,6 +71,7 @@ const Register = () => {
     }
     return (
         <div>
+            <Toaster></Toaster>
 
 <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">
                 <form onSubmit={handleRegister} className="card-body">

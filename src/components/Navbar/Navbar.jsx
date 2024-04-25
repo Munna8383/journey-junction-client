@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Navbar = () => {
+
+  const {user,logout}= useContext(AuthContext)
 
     const [theme,setTheme]=useState(false);
     const handleTheme=()=>{
@@ -21,7 +24,7 @@ const Navbar = () => {
         }
     }
     return (
-        <div>
+        <div className="mt-4">
 
 <div className="navbar bg-base-100 text-[#808080]">
   <div className="navbar-start">
@@ -37,11 +40,13 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-[#AC87C5] text-xl hidden md:block">Journey Junction</a>
+    <a className="btn btn-ghost text-[#AC87C5] text-2xl font-bold hidden md:block">Journey Junction</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><NavLink className={({ isActive }) =>
+         isActive ? "text-[#AC87C5] font-bold" : ""
+        }>Home</NavLink></li>
       <li>
       <a >item2</a>
       </li>
@@ -50,10 +55,14 @@ const Navbar = () => {
   </div>
   <div className="navbar-end space-x-5">
     <button onClick={handleTheme} className="text-3xl">{theme?<CiLight />:<MdDarkMode></MdDarkMode>}</button>
-  <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  <div className="tooltip hidden md:block" data-tip={user?.displayName||"Null"} > 
+ 
+          <img className="w-10 rounded-full"  src={user?user?.photoURL:"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
         </div>
-   <Link to={"/login"}> <button className="btn bg-[#AC87C5] text-white">Login</button></Link>
+        {
+          user?<button onClick={()=>logout()} className="btn bg-[#AC87C5] text-white">Logout</button>:<Link to={"/login"}> <button  className="btn bg-[#AC87C5] text-white">Login</button></Link>
+        }
+   
   </div>
 </div>
             

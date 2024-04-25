@@ -1,14 +1,74 @@
+import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import { Toaster,toast} from 'react-hot-toast';
 
 const Login = () => {
+    const {googleLogin,githubLogin,login}= useContext(AuthContext)
+
 
     const handleLogin=e=>{
         e.preventDefault()
+
+        const email = e.target.email.value 
+        const password = e.target.password.value 
+        login(email,password)
+        .then(() => {
+
+            toast.success('Logged In Successfully')
+            // Signed in 
+            // setTimeout(()=>{
+            //     navigate(location?.state || "/")
+            // },2000)
+            // ...
+          })
+          .catch(()=>{
+            toast.error("Incorrect username or password")
+          })
+
+          e.target.reset()
+
     }
+    
+
+    const SignINGoogle = ()=>{
+
+        googleLogin()
+        .then(()=>{
+
+            toast.success('Logged In Successfully')
+
+            // setTimeout(()=>{
+            //     navigate(location?.state || "/")
+            // },2000)
+           
+        })
+        .catch(()=>{
+            toast.error("login unsuccessful")
+           
+        })
+
+    }
+
+    const SignINGithub =()=>{
+        githubLogin()
+        .then(()=>{
+
+            toast.success('Logged In Successfully')
+            // setTimeout(()=>{
+            //     navigate(location?.state || "/")
+            // },2000)
+        })
+        .catch(()=>{
+            toast.error("login unsuccessful")
+        })
+    }
+
     return (
         <div>
+            <Toaster></Toaster>
 
 
 <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">
@@ -30,12 +90,12 @@ const Login = () => {
                     </div>
                 </form>
 
-                <div className="divider divider-info">or</div>
+                <div className="divider divider-secondary">or</div>
 
                 <div className="flex justify-center gap-10 mb-5">
 
-                    <button ><span className="text-[#AC87C5] text-4xl"><FaGoogle /></span></button>
-                    <button><span className="text-[#AC87C5] text-4xl"><FaGithub /></span></button>
+                    <button onClick={SignINGoogle} ><span className="text-[#AC87C5] text-4xl"><FaGoogle /></span></button>
+                    <button onClick={SignINGithub}><span className="text-[#AC87C5] text-4xl"><FaGithub /></span></button>
 
                 </div>
             </div>
