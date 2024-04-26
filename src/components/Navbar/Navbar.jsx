@@ -22,7 +22,7 @@ const Navbar = () => {
         else{
 
             const body = document.querySelector("html");
-            body.setAttribute("data-theme","synthwave")
+            body.setAttribute("data-theme","dark")
 
         }
     }
@@ -52,7 +52,10 @@ const Navbar = () => {
          isActive ? "text-[#AC87C5] font-bold" : ""
         }>Home</NavLink></li>
       <li>
-      <a >item2</a>
+      <NavLink to={"/addSpot"} className={({ isActive }) =>
+         isActive ? "text-[#AC87C5] font-bold" : ""
+        }>Add Spot</NavLink></li>
+      <li>
       </li>
       <li><a>Item 3</a></li>
     </ul>
@@ -66,7 +69,10 @@ const Navbar = () => {
           <img className="w-10 rounded-full"  src={user?user?.photoURL:"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
         </div>
         {
-          user?<button onClick={()=>logout()} className="btn bg-[#AC87C5] text-white">Logout</button>:<Link to={"/login"}> <button  className="btn bg-[#AC87C5] text-white">Login</button></Link>
+          user?"":<Link to={"/register"}> <button className="btn bg-[#AC87C5] text-white">Register</button></Link>
+        }
+        {
+          user?<button onClick={()=>logout()} className="btn bg-[#AC87C5] text-white">Logout</button>:<Link to={"/login"}> <button className="btn bg-[#AC87C5] text-white">Login</button></Link>
         }
    
   </div>

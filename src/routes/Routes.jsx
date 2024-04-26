@@ -6,6 +6,11 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import AddSpot from "../components/AddSpot/AddSpot";
+import Protected from "../components/Proctected/Protected";
+
+
+
 
 
   const router = createBrowserRouter([
@@ -25,6 +30,10 @@ import Register from "../components/Register/Register";
         {
             path:"register",
             element:<Register></Register>
+        },
+        {
+          path:"/addSpot",
+          element:<Protected><AddSpot></AddSpot></Protected>
         }
       ]
     },

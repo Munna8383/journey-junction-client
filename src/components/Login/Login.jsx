@@ -1,12 +1,16 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Toaster,toast} from 'react-hot-toast';
 
 const Login = () => {
     const {googleLogin,githubLogin,login}= useContext(AuthContext)
+
+    const location = useLocation()
+    const navigate = useNavigate()
 
 
     const handleLogin=e=>{
@@ -18,11 +22,11 @@ const Login = () => {
         .then(() => {
 
             toast.success('Logged In Successfully')
-            // Signed in 
-            // setTimeout(()=>{
-            //     navigate(location?.state || "/")
-            // },2000)
-            // ...
+        
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
+        
           })
           .catch(()=>{
             toast.error("Incorrect username or password")
@@ -40,9 +44,9 @@ const Login = () => {
 
             toast.success('Logged In Successfully')
 
-            // setTimeout(()=>{
-            //     navigate(location?.state || "/")
-            // },2000)
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
            
         })
         .catch(()=>{
@@ -57,9 +61,9 @@ const Login = () => {
         .then(()=>{
 
             toast.success('Logged In Successfully')
-            // setTimeout(()=>{
-            //     navigate(location?.state || "/")
-            // },2000)
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
         })
         .catch(()=>{
             toast.error("login unsuccessful")
