@@ -59,8 +59,10 @@ const Navbar = () => {
          isActive ? "text-[#AC87C5] font-bold" : ""
         }>Add Spot</NavLink></li>
       <li>
-      </li>
-      <li><a>Item 3</a></li>
+      <NavLink to={"/spot/myList"} className={({ isActive }) =>
+         isActive ? "text-[#AC87C5] font-bold" : ""
+        }>My List</NavLink></li>
+      
     </ul>
   </div>
   <div className="navbar-end space-x-5">

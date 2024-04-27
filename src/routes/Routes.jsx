@@ -10,6 +10,8 @@ import AddSpot from "../components/AddSpot/AddSpot";
 import Protected from "../components/Proctected/Protected";
 import AllSpot from "../components/AllSpot/AllSpot";
 import Details from "../components/Details/Details";
+import MyList from "../components/MyList/MyList";
+import Update from "../components/Update/Update";
 
 
 
@@ -45,6 +47,16 @@ import Details from "../components/Details/Details";
           path:"/details/:id",
           element:<Protected><Details></Details></Protected>,
           loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+        },{
+          path:"/spot/myList",
+          element:<Protected><MyList></MyList></Protected>
+        },
+        {
+          
+            path:"/update/:id",
+            element:<Protected><Update></Update></Protected>,
+            loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+          
         }
       ]
     },

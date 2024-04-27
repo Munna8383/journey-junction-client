@@ -47,7 +47,7 @@ const AddSpot = () => {
         <div className="mt-5">
               <Toaster></Toaster>
             <div className="text-center">
-                <h1 className="font-bold text-3xl">Add Tourist Spots</h1>
+                <h1 className="text-3xl lg:text-4xl font-extrabold">Add Tourist Spots</h1>
             </div>
 
             <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">
