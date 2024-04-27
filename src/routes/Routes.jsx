@@ -9,6 +9,7 @@ import Register from "../components/Register/Register";
 import AddSpot from "../components/AddSpot/AddSpot";
 import Protected from "../components/Proctected/Protected";
 import AllSpot from "../components/AllSpot/AllSpot";
+import Details from "../components/Details/Details";
 
 
 
@@ -39,6 +40,11 @@ import AllSpot from "../components/AllSpot/AllSpot";
         {
           path:"/allSpot",
           element:<AllSpot></AllSpot>
+        },
+        {
+          path:"/details/:id",
+          element:<Protected><Details></Details></Protected>,
+          loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
         }
       ]
     },

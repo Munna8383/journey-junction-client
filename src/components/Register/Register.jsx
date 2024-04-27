@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {FaEye,FaEyeSlash} from "react-icons/fa"
 import { Toaster,toast} from 'react-hot-toast';
 import { AuthContext } from "../Providers/AuthProvider";
@@ -11,6 +11,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 const Register = () => {
     const [showPassword,setShowPassword]=useState(false)
     const{createUser,updatePhotoAndName,logout}= useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleRegister=e=>{
         e.preventDefault()
@@ -56,10 +57,10 @@ const Register = () => {
                 toast.success('Registered Successfully')
                 logout()
 
-                // setTimeout(()=>{
-                //        navigate("/login")
+                setTimeout(()=>{
+                       navigate("/login")
 
-                // },2000)
+                },2000)
             })
         })
 
@@ -74,6 +75,10 @@ const Register = () => {
             <Toaster></Toaster>
 
 <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">
+
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-[#AC87C5]">Register</h1>
+                </div>
                 <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                         <label className="label">

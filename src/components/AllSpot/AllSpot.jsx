@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaDollarSign } from "react-icons/fa";
@@ -9,18 +10,23 @@ import { SlCalender } from "react-icons/sl";
 const AllSpot = () => {
 
     const [allSpot,setAllSpot]=useState([])
+    const [loading,setLoading]= useState(true)
 
     useEffect(()=>{
         fetch("http://localhost:5000/spot")
         .then(res=>res.json())
-        .then(data=>setAllSpot(data))
+        .then(data=>{
+            setLoading(false)
+            setAllSpot(data)
+        }
+            )
     },[])
 
-    console.log(allSpot)
 
     
     return (
         <div className="mt-5">
+            {loading&&<div className="flex justify-center"><span className="loading loading-spinner loading-lg"></span></div>}
            <div className="text-center">
             <h1 className="text-3xl lg:text-4xl font-extrabold">All Tourist Spot</h1>
            </div>
@@ -67,7 +73,7 @@ const AllSpot = () => {
                       </div>
                   </div>
                   <div className="card-actions justify-left">
-                   <Link> <button className="btn  bg-[#AC87C5] text-white">View Details</button></Link>
+                   <Link to={`/details/${one._id}`}> <button className="btn  bg-[#AC87C5] text-white">View Details</button></Link>
                   </div>
                 </div>
               </div>)

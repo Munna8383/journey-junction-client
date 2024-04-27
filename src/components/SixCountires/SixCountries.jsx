@@ -56,7 +56,7 @@ const SixCountries = () => {
           </div>
       </div>
       <div className="card-actions justify-left">
-       <Link> <button className="btn  bg-[#AC87C5] text-white">View Details</button></Link>
+       <Link  to={`/details/${single._id}`}> <button className="btn  bg-[#AC87C5] text-white">View Details</button></Link>
       </div>
     </div>
   </div>
