@@ -42,6 +42,7 @@ const Navbar = () => {
           <Link to={"/allSpot"}>All Spot</Link>
         </li>
        <li> <Link to={"/addSpot"}>Add Spot</Link></li>
+       <li> <Link to={"/spot/myList"}>My List</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-[#AC87C5] text-2xl font-bold hidden md:block">Journey Junction</a>
