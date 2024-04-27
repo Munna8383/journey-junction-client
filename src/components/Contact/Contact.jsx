@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div className="mt-10">
             <div className="text-center">
-                <h1 className="text-5xl font-extrabold">Contact Us</h1>
+                <h1 className="text-4xl font-extrabold">Contact Us</h1>
             </div>
 
             <div className="flex-row md:flex gap-20 items-center">

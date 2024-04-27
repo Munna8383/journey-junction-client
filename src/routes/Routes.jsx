@@ -8,6 +8,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import AddSpot from "../components/AddSpot/AddSpot";
 import Protected from "../components/Proctected/Protected";
+import AllSpot from "../components/AllSpot/AllSpot";
 
 
 
@@ -34,6 +35,10 @@ import Protected from "../components/Proctected/Protected";
         {
           path:"/addSpot",
           element:<Protected><AddSpot></AddSpot></Protected>
+        },
+        {
+          path:"/allSpot",
+          element:<AllSpot></AllSpot>
         }
       ]
     },

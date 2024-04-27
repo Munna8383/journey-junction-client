@@ -51,6 +51,9 @@ const Navbar = () => {
       <li><NavLink to={"/"} className={({ isActive }) =>
          isActive ? "text-[#AC87C5] font-bold" : ""
         }>Home</NavLink></li>
+      <li><NavLink to={"/allSpot"} className={({ isActive }) =>
+         isActive ? "text-[#AC87C5] font-bold" : ""
+        }>All Spots</NavLink></li>
       <li>
       <NavLink to={"/addSpot"} className={({ isActive }) =>
          isActive ? "text-[#AC87C5] font-bold" : ""
