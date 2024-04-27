@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import { Typewriter } from 'react-simple-typewriter'
+import { Slide } from "react-awesome-reveal";
 
 
 const Slider = () => {
@@ -16,7 +17,7 @@ const Slider = () => {
             <div className="hidden md:block md:w-1/2 space-y-7">
 
             
-                    <h1 className="text-4xl font-bold text-[#AC87C5]">Journey Junction</h1>
+                    <Slide><h1  className="text-4xl font-bold text-[#AC87C5]">Journey Junction</h1></Slide>
 
                     <p className="font-semibold text-[#808080]"><Typewriter
             words={["Welcome to our enchanting world of hospitality and exploration! Whether you are seeking a luxurious retreat or an adventurous getaway, our hotel and tourism is your passport to unforgettable experiences.Nestled amidst breathtaking landscapes and vibrant cityscapes, our collection of handpicked hotels promises unparalleled comfort and style."]}
@@ -25,7 +26,7 @@ const Slider = () => {
             typeSpeed={15}
           /></p>
 
-                    <button className="btn bg-[#AC87C5] text-white">BOOK NOW</button>
+                    <Slide><button className="btn bg-[#AC87C5] text-white">BOOK NOW</button></Slide>
                 
 
             </div>
