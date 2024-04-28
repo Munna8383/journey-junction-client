@@ -6,7 +6,6 @@ const Update = () => {
     const updateData = useLoaderData()
     const navigate = useNavigate()
 
-    console.log(updateData)
 
    const handleUpdate = e=>{
     e.preventDefault()

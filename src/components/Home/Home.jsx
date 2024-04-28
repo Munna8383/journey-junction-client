@@ -3,6 +3,7 @@ import Country from "../Country/Country";
 import Reviews from "../Reviews/Reviews";
 import SixCountries from "../SixCountires/SixCountries";
 import Slider from "../Slider/Slider";
+import { Helmet} from 'react-helmet-async';
 
 
 
@@ -10,6 +11,10 @@ import Slider from "../Slider/Slider";
 const Home = () => {
     return (
         <div>
+
+          <Helmet>
+            <title>Home || Journey Junction</title>
+          </Helmet>
 
            
            <Slider></Slider>

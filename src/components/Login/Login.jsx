@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Toaster,toast} from 'react-hot-toast';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const {googleLogin,githubLogin,login}= useContext(AuthContext)
@@ -73,6 +74,10 @@ const Login = () => {
     return (
         <div>
             <Toaster></Toaster>
+
+            <Helmet>
+            <title>Login || Journey Junction</title>
+          </Helmet>
 
 
 <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">

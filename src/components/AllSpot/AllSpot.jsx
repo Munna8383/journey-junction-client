@@ -5,6 +5,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { FaPersonDrowning } from "react-icons/fa6";
 import { CiTimer } from "react-icons/ci";
 import { SlCalender } from "react-icons/sl";
+import { Helmet } from "react-helmet-async";
 
 
 const AllSpot = () => {
@@ -43,6 +44,9 @@ const AllSpot = () => {
 
     return (
         <div className="mt-5">
+            <Helmet>
+            <title>All Spot || Journey Junction</title>
+          </Helmet>
             {loading && <div className="flex justify-center"><span className="loading loading-spinner loading-lg"></span></div>}
 
             <div className="flex justify-center">

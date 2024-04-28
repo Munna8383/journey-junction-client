@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -41,7 +42,7 @@ const MyList = () => {
             })
             .then(res=>res.json())
             .then(data=>{
-                console.log(data)
+                
                 if(data.deletedCount>0){
 
 
@@ -70,6 +71,9 @@ const MyList = () => {
 
     return (
         <div>
+            <Helmet>
+            <title>My List || Journey Junction</title>
+          </Helmet>
             <div className="text-center">
                 <h1 className="text-3xl lg:text-4xl font-extrabold">My List</h1>
             </div>

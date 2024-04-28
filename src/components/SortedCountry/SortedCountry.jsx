@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -7,8 +8,12 @@ const SortedCountry = () => {
 
     return (
         <div>
+
+            <Helmet>
+            <title>Country || Journey Junction</title>
+          </Helmet>
              <div className="text-center">
-            <h1  className="text-3xl lg:text-4xl font-extrabold">Get All Spot In One Place</h1>
+            <h1  className="text-3xl lg:text-4xl font-extrabold">Get Spot In One Place</h1>
         </div>
 
            <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">

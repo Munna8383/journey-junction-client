@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -10,6 +11,9 @@ const Details = () => {
         <div data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000" className="mt-10">
+            <Helmet>
+            <title>Details || Journey Junction</title>
+          </Helmet>
             <div className="flex-row lg:flex items-center gap-7">
 
                 <div className="lg:w-1/2">

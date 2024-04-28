@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {FaEye,FaEyeSlash} from "react-icons/fa"
 import { Toaster,toast} from 'react-hot-toast';
 import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -29,7 +30,7 @@ const Register = () => {
         const email = e.target.email.value 
         const password = e.target.password.value 
 
-        console.log(name,photo,email,password)
+    
 
 
         if (!passwordRegex.test(password)) {
@@ -73,6 +74,10 @@ const Register = () => {
     return (
         <div>
             <Toaster></Toaster>
+
+            <Helmet>
+            <title>Register || Journey Junction</title>
+          </Helmet>
 
 <div className="md:w-3/4 lg:w-1/2 mx-auto text-[#808080]">
 

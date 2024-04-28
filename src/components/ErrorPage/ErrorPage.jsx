@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 const ErrorPage = () => {
     return (
         <section className="flex items-center dark:bg-gray-50 dark:text-gray-800">
+            <Helmet>
+            <title>Error || Journey Junction</title>
+          </Helmet>
         <div className="container flex flex-col items-center justify-center px-5 mx-auto space-y-1 text-center w-[700px]">
            <img className="rounded-xl" src="https://i.ibb.co/Y7zBSWD/de0be81ccbcdb5d0b348a89be8e9c7e7.jpg"/>
             <p className="text-2xl">Looks like you are in wrong URL</p>

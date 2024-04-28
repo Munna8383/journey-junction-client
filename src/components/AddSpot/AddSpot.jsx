@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Toaster,toast} from 'react-hot-toast';
+import { Helmet } from "react-helmet-async";
 
 
 const AddSpot = () => {
@@ -46,6 +47,9 @@ const AddSpot = () => {
     return (
         <div className="mt-5">
               <Toaster></Toaster>
+              <Helmet>
+            <title>Add Spot || Journey Junction</title>
+          </Helmet>
             <div className="text-center">
                 <h1 className="text-3xl lg:text-4xl font-extrabold">Add Tourist Spots</h1>
             </div>
