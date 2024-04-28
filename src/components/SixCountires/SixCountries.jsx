@@ -20,7 +20,7 @@ const SixCountries = () => {
     return (
        <div className="mt-10">
         <div className="text-center">
-            <h1  className="text-3xl lg:text-4xl font-extrabold">Explore Different Countries</h1>
+            <h1  className="text-3xl lg:text-4xl font-extrabold">Explore Different Spot</h1>
         </div>
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
 
