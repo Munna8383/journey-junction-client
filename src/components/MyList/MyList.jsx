@@ -16,7 +16,7 @@ const MyList = () => {
 
     useEffect(()=>{
 
-        fetch(`http://localhost:5000/spot/${email}`)
+        fetch(`https://journey-junction-server-one.vercel.app/spot/${email}`)
         .then(res=>res.json())
         .then(data=>{
             setUserData(data)
@@ -37,7 +37,7 @@ const MyList = () => {
           }).then((result) => {
             if(result.isConfirmed) {
             
-            fetch(`http://localhost:5000/spot/${_id}`,{
+            fetch(`https://journey-junction-server-one.vercel.app/spot/${_id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())

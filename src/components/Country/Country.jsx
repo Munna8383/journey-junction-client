@@ -9,7 +9,7 @@ const Country = () => {
 
     useEffect(()=>{
 
-        fetch("http://localhost:5000/country")
+        fetch("https://journey-junction-server-one.vercel.app/country")
         .then(res=>res.json())
         .then(data=>{
             setCountry(data)

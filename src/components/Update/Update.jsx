@@ -22,7 +22,7 @@ const Update = () => {
 
     const UpdateSpot = {photo,spotName,country,location,description,cost,season,travelTime,visitorPerYear}
 
-    fetch(`http://localhost:5000/update/${updateData._id}`,{
+    fetch(`https://journey-junction-server-one.vercel.app/update/${updateData._id}`,{
         method:"PUT",
         headers:{
            "content-type":"application/json" 

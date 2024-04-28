@@ -25,7 +25,7 @@ const AddSpot = () => {
         const spot = {photo,spotName,country,location,description,cost,season,travelTime,visitorPerYear,name,email}
 
 
-        fetch("http://localhost:5000/allSpot",{
+        fetch("https://journey-junction-server-one.vercel.app/allSpot",{
             method:"POST",
             headers:{
                 "content-type":"application/json"

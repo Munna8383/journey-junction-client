@@ -9,7 +9,7 @@ const SixCountries = () => {
     const [sixCountries,setSixCountries]=useState([])
 
     useEffect(()=>{
-        fetch("http://localhost:5000/spot")
+        fetch("https://journey-junction-server-one.vercel.app/spot")
         .then(res=>res.json())
         .then(data=>setSixCountries(data))
     },[])

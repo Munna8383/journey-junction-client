@@ -47,7 +47,7 @@ import SortedCountry from "../components/SortedCountry/SortedCountry";
         {
           path:"/details/:id",
           element:<Protected><Details></Details></Protected>,
-          loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+          loader:({params})=>fetch(`https://journey-junction-server-one.vercel.app/details/${params.id}`)
         },{
           path:"/spot/myList",
           element:<Protected><MyList></MyList></Protected>
@@ -56,13 +56,13 @@ import SortedCountry from "../components/SortedCountry/SortedCountry";
           
             path:"/update/:id",
             element:<Protected><Update></Update></Protected>,
-            loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+            loader:({params})=>fetch(`https://journey-junction-server-one.vercel.app/details/${params.id}`)
           
         },
         {
           path:"/countries/:country",
           element:<SortedCountry></SortedCountry>,
-          loader: ({params})=>fetch(`http://localhost:5000/countries/${params.country}`)
+          loader: ({params})=>fetch(`https://journey-junction-server-one.vercel.app/countries/${params.country}`)
         }
       ]
     },

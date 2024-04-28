@@ -18,7 +18,7 @@ const SortedCountry = () => {
 
            <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
         {
-            nation.map((item,index)=><div key={index} className="card w-96 bg-base-100 shadow-xl">
+            nation.map((item,index)=><div key={index} className="card bg-base-100 shadow-xl">
             <div className="card-body">
               <h2 className="card-title">Spot Name: {item.spotName}</h2>
               <p><span>Country:</span>{item.country}</p>
