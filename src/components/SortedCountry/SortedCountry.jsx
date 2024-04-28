@@ -5,7 +5,6 @@ const SortedCountry = () => {
 
     const nation = useLoaderData()
 
-    console.log(nation)
     return (
         <div>
              <div className="text-center">

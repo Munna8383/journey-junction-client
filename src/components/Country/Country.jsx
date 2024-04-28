@@ -19,7 +19,6 @@ const Country = () => {
 
     },[])
 
-    console.log(country)
 
 
     return (
@@ -30,7 +29,7 @@ const Country = () => {
             <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
 
 {
-    country.map((item,index)=> <Link key={index} to={`/countries/${item.country}`}><div className="card h-[650px] card-compact bg-base-100 shadow-xl">
+    country.map((item,index)=> <Link  data-aos="zoom-out" key={index} to={`/countries/${item.country}`}><div className="card h-[650px] card-compact bg-base-100 shadow-xl">
     <figure ><img className="h-[300px]" src={item.image} alt="Shoes" /></figure>
     <div className="card-body space-y-4">
   

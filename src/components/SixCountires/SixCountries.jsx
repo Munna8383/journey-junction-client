@@ -25,7 +25,7 @@ const SixCountries = () => {
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
 
 {
-    newSix.map((single,index)=><div key={index} className="card card-compact bg-base-100 shadow-xl">
+    newSix.map((single,index)=><div data-aos="zoom-in" key={index} className="card card-compact bg-base-100 shadow-xl">
     <figure ><img className="h-[300px]" src={single.photo} alt="Shoes" /></figure>
     <div className="card-body space-y-4">
       <h2 className="card-title text-2xl font-bold">{single.spotName}</h2>
