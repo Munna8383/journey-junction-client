@@ -30,7 +30,7 @@ const SixCountries = () => {
     <div className="card-body space-y-4">
       <h2 className="card-title text-2xl font-bold">{single.spotName}</h2>
   
-      <div  data-aos="fade-up" data-aos-delay="50" className="flex gap-2 items-center font-bold">
+      <div  className="flex gap-2 items-center font-bold">
           <div>
           <FaLocationDot />
           </div>

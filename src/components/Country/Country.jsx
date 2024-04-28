@@ -30,7 +30,7 @@ const Country = () => {
             <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 ">
 
 {
-    country.map((item,index)=> <Link key={index}><div key={index} className="card h-[600px] card-compact bg-base-100 shadow-xl">
+    country.map((item,index)=> <Link key={index} to={`/countries/${item.country}`}><div className="card h-[650px] card-compact bg-base-100 shadow-xl">
     <figure ><img className="h-[300px]" src={item.image} alt="Shoes" /></figure>
     <div className="card-body space-y-4">
   
@@ -39,7 +39,7 @@ const Country = () => {
           <FaFlag />
           </div>
           <div>
-              <h1><span>Country: </span><span className="text-lg text-[#AC87C5]">{item.country_Name}</span></h1>
+              <h1><span>Country: </span><span className="text-lg text-[#AC87C5]">{item.country}</span></h1>
           </div>
       </div>
       <div className="flex gap-2 items-center font-bold">

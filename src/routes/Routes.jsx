@@ -12,6 +12,7 @@ import AllSpot from "../components/AllSpot/AllSpot";
 import Details from "../components/Details/Details";
 import MyList from "../components/MyList/MyList";
 import Update from "../components/Update/Update";
+import SortedCountry from "../components/SortedCountry/SortedCountry";
 
 
 
@@ -57,6 +58,11 @@ import Update from "../components/Update/Update";
             element:<Protected><Update></Update></Protected>,
             loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
           
+        },
+        {
+          path:"/countries/:country",
+          element:<SortedCountry></SortedCountry>,
+          loader: ({params})=>fetch(`http://localhost:5000/countries/${params.country}`)
         }
       ]
     },
