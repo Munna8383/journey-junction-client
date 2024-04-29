@@ -51,10 +51,10 @@ const AllSpot = () => {
 
             <div className="flex justify-center">
                 <div className="dropdown dropdown-hover">
-                    <div tabIndex={0} role="button" className="btn m-1">Sorted By Price</div>
+                    <div tabIndex={0} role="button" className="btn m-1">Sorted By Cost</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><button onClick={handleAscending}>Ascending</button></li>
-                        <li><button onClick={handleDescending}>Descending</button></li>
+                        <li><button onClick={handleAscending}>Low</button></li>
+                        <li><button onClick={handleDescending}>High</button></li>
                     </ul>
                 </div>
             </div>

@@ -10,6 +10,7 @@ Sub Category - Southeast Asia
 
 
 *Firebase Live Website:* [https://journey-junction-ca237.web.app/](https://journey-junction-ca237.web.app/)
+*Netlify Live Website:* [https://journey-junction78.netlify.app/](https://journey-junction78.netlify.app/)
 
 
 ## Features
