@@ -1,6 +1,6 @@
 # Journey Junction
 
-A online website where people rent residential houses.
+A online website where people explore different Spots.
 
 ## Requirement and Subcategory:
 
