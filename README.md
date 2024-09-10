@@ -2,14 +2,11 @@
 
 A online website where people explore different Spots.
 
-## Requirement and Subcategory:
-
-B9 A10 Type-01 Requirements
-
-Sub Category - Southeast Asia
+# Project Overview:
+I have developed a simple CRUD operation website where users can add, delete, update, and read spots. For enhanced security, I have implemented an authentication system on this website. This project showcases my ability to create user-friendly interfaces and secure applications.
 
 
-
+## Live Link:
 *Netlify Live Website:* [https://journey-junction78.netlify.app/](https://journey-junction78.netlify.app/)
 
 
@@ -21,10 +18,17 @@ Sub Category - Southeast Asia
 - Private and Protected route system.
 - Responsive website.
 
-## NPM Packages
+## Techonlogy Used
+HTML,CSS,TAILWIND CSS, JAVASCRIT,REACT,EXPRESSJS,MONGODB
 
-1.AOS Package.
-2.Swiper Slider
-3.Lottie React
-4.React-simple-typewritter
-5.React-tooltip
+## Steps to run project localy
+- Clone the project
+- Open in vs code
+- open terminal and write npm i
+- replace firebase credentials
+- npm run dev to run project
+
+
+
+
+
