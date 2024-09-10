@@ -46,7 +46,7 @@ import SortedCountry from "../components/SortedCountry/SortedCountry";
         },
         {
           path:"/details/:id",
-          element:<Protected><Details></Details></Protected>,
+          element:<Details></Details>,
           loader:({params})=>fetch(`https://journey-junction-server-one.vercel.app/details/${params.id}`)
         },{
           path:"/spot/myList",

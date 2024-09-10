@@ -2,13 +2,13 @@
 
 const Reviews = () => {
     return (
-        <div className="mt-10">
+        <div className="mt-20">
             <div className="text-center">
                 <h1  className="text-4xl font-extrabold">Customer Reviews</h1>
             </div>
 
             <div className="flex-row md:flex gap-5">
-                <div data-aos="fade-right" className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
@@ -31,7 +31,7 @@ const Reviews = () => {
                         <p>The interface is user-friendly, and I loved how they curated personalized recommendations based on my interests. Thanks to this site, my vacation was unforgettable!</p>
                     </div>
                 </div>
-                <div  data-aos="fade-up" data-aos-delay="300" className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div   className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
@@ -54,14 +54,14 @@ const Reviews = () => {
                         <p>When I encountered a small issue with my booking, their support team was quick to respond and resolve it. I highly recommend this website to anyone looking to plan their next adventure hassle-free.</p>
                     </div>
                 </div>
-                <div data-aos="fade-left"  className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div  className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
-                                <img src="https://source.unsplash.com/100x100/?portrait" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                                <img src="https://i.imghippo.com/files/7h5fL1725985757.png" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                             </div>
                             <div>
-                                <h4 className="font-bold">Monica Charunda</h4>
+                                <h4 className="font-bold">Jahed Ahmed</h4>
                                 <span className="text-xs dark:text-gray-600">9 days ago</span>
                             </div>
                         </div>

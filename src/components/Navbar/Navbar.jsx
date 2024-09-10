@@ -48,20 +48,20 @@ const Navbar = () => {
     <a className="btn btn-ghost text-[#AC87C5] text-2xl font-bold hidden md:block">Journey Junction</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 space-x-2">
       <li><NavLink to={"/"} className={({ isActive }) =>
-         isActive ? "text-[#AC87C5] font-bold" : ""
+         isActive ? "text-[#AC87C5] font-semibold" : ""
         }>Home</NavLink></li>
       <li><NavLink to={"/allSpot"} className={({ isActive }) =>
-         isActive ? "text-[#AC87C5] font-bold" : ""
+         isActive ? "text-[#AC87C5] font-semibold" : ""
         }>All Spots</NavLink></li>
       <li>
       <NavLink to={"/addSpot"} className={({ isActive }) =>
-         isActive ? "text-[#AC87C5] font-bold" : ""
+         isActive ? "text-[#AC87C5] font-semibold" : ""
         }>Add Spot</NavLink></li>
       <li>
       <NavLink to={"/spot/myList"} className={({ isActive }) =>
-         isActive ? "text-[#AC87C5] font-bold" : ""
+         isActive ? "text-[#AC87C5] font-semibold" : ""
         }>My List</NavLink></li>
       
     </ul>
@@ -72,13 +72,13 @@ const Navbar = () => {
   data-tooltip-content={user? user?.displayName:"Null"}
   data-tooltip-place="top"  > 
  
-          <img className="w-10 rounded-full"  src={user?user?.photoURL:"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
+          <img className="size-12 rounded-full"  src={user?user?.photoURL:"https://i.ibb.co/8xLfzwp/sergio-de-paula-c-Gmwf-HBDzk-unsplash.jpg"}/>
         </div>
         {
-          user?"":<Link to={"/register"}> <button className="btn bg-[#AC87C5] text-white">Register</button></Link>
+          user?"":<Link to={"/register"}> <button className="btn btn-md bg-[#AC87C5] text-white">Register</button></Link>
         }
         {
-          user?<button onClick={()=>logout()} className="btn bg-[#AC87C5] text-white">Logout</button>:<Link to={"/login"}> <button className="btn bg-[#AC87C5] text-white">Login</button></Link>
+          user?<button onClick={()=>logout()} className="btn btn-md bg-[#AC87C5] text-white">Logout</button>:<Link to={"/login"}> <button className="btn btn-md bg-[#AC87C5] text-white">Login</button></Link>
         }
    
   </div>

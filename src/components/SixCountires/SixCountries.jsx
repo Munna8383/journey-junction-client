@@ -18,7 +18,7 @@ const SixCountries = () => {
 
     const newSix = sixCountries.slice(0,6)
     return (
-       <div className="mt-10">
+       <div className="mt-20">
         <div className="text-center">
             <h1  className="text-3xl lg:text-4xl font-extrabold">Explore Different Spot</h1>
         </div>

@@ -8,14 +8,14 @@ const Contact = () => {
                 <h1 className="text-4xl font-extrabold">Contact Us</h1>
             </div>
 
-            <div className="flex-row md:flex gap-20 items-center">
-                <div className="w-1/2 mx-auto">
+            <div className="flex-row md:flex gap-5 md:gap-20 items-center">
+                <div className="w-full md:w-1/2 mx-auto">
 
                 <Lottie animationData={man}/>
 
                 </div>
 
-                <div className="w-1/2 space-y-5 mx-auto">
+                <div className="w-fullS md:w-1/2 space-y-5 mx-auto">
                   <div>
                   <h1 className="text-2xl font-extrabold">Get In Touch</h1>
 
@@ -24,11 +24,11 @@ const Contact = () => {
 
                     <form>
 
-                    <div className="form-control w-full md:w-2/3 ">
+                    <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" placeholder="Enter Email" className="input input-bordered" required />
+                        <input type="email" name="email" placeholder="Enter Email" className="input input-bordered w-full" required />
                     </div>
 
                     <div  className="form-control">
@@ -38,11 +38,11 @@ const Contact = () => {
                         </label>
 
 
-                    <textarea placeholder="Enter your message" className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+                    <textarea placeholder="Enter your message" className="textarea textarea-bordered textarea-lg w-full" ></textarea>
                     </div>
 
                     <div className="mt-3">
-                        <input className="btn bg-[#AC87C5] text-white w-full md:w-1/3" type="submit" value="Contact" />
+                        <input className="btn bg-[#AC87C5] text-white w-full" type="submit" value="Contact" />
                     </div>
 
                     </form>
